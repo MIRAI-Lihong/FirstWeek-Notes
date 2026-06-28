@@ -95,7 +95,7 @@ f()
 
 ### 注意点
 
-（1）把await命令放在try...catch代码块中
+（1）把`await`命令放在`try...catch`代码块中
 
 ```js
 async function myFunction() {

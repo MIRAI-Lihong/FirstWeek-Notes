@@ -127,7 +127,7 @@ B.hello() // hello world
 
 ### 静态属性是浅拷贝继承
 
-- 值类型（number、string 等）：子类修改不影响父类
+1. **值类型（number、string 等）：子类修改不影响父类**
 
 ```js
 class A {
@@ -144,7 +144,7 @@ B.foo // 99
 A.foo // 100
 ```
 
-- 引用类型（对象、数组等）：子类和父类指向同一个对象，互相影响
+2. **引用类型（对象、数组等）**：子类和父类指向同一个对象，**互相影响**
 
 ```js
 class A {
@@ -176,7 +176,7 @@ Object.getPrototypeOf(ColorPoint) === Point // true
 ### 作为函数使用 — 代表父类构造函数
 
 - 只能在子类的 `constructor()` 中调用
-- 调用后生成继承父类的 `this` 对象
+- 调用后**生成继承父类的 `this` 对象**
 - `super()` 内部的 `this` 指向**子类实例**，相当于 `A.prototype.constructor.call(this)`
 
 ```js

@@ -23,6 +23,7 @@ const s = new Set()
 s.add(1).add(2).add(2)
 // 注意2被加入了两次
 
+// 返回实例的长度
 s.size // 2
 
 s.has(1) // true
@@ -70,8 +71,8 @@ set.forEach((value, key) => console.log(key + ' : ' + value))
 
 WeakSet 结构与 Set 类似，也是不重复的值的集合。但是，它与 Set 有两个区别。
 
-1. WeakSet 的成员只能是对象和 Symbol 值，而不能是其他类型的值
-2. WeakSet 中的对象都是弱引用
+1. WeakSet 的成员只能是**对象和 Symbol** 值，而不能是其他类型的值
+2. WeakSet 中的对象都是**弱引用**
 
 **基本语法**：
 
@@ -178,7 +179,7 @@ jsonToStrMap('{"yes": true, "no": false}')
 与Map结构类似，也是用于生成键值对的集合
 与Map的区别：
 
-1. WeakMap只接受对象（null除外）和 Symbol 值作为键名
+1. WeakMap只接受**对象和 Symbol 值**作为键名
 2. WeakMap的键名所指向的对象，不计入垃圾回收机制
 
 **基本语法**：
@@ -211,9 +212,9 @@ document.getElementById('logo').addEventListener(
 ## 5.WeakRef
 
 **基本语法**：
-直接创建对象的弱引用
+**直接创建对象的弱引用**
 
-WeakRef 实例对象有一个deref()方法，如果原始对象存在，该方法返回原始对象；如果原始对象已经被垃圾回收机制清除，该方法返回undefined。
+WeakRef 实例对象有一个`deref()`方法，**如果原始对象存在，该方法返回原始对象；如果原始对象已经被垃圾回收机制清除，该方法返回`undefined`**。
 
 ```js
 let target = {}

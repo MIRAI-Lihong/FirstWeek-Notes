@@ -2,7 +2,7 @@
 
 ## constructor()
 
-constructor()方法是类的默认方法，如果没有显式定义，自动添加
+`constructor()`方法是类的默认方法，如果没有显式定义，**自动添加**
 
 ```js
 class Point {}
@@ -27,7 +27,7 @@ new Foo() instanceof Foo
 
 ## 类的实例
 
-使用 new 命令创建
+使用 **`new`** 命令创建
 
 ```js
 class Point {
@@ -49,8 +49,8 @@ class Point {
 let point = new Point(2, 3)
 ```
 
-> 类的属性和方法，除非显式定义在其本身（即定义在this对象上），否则都是定义在原型上
-> 类的所有实例共享一个原型对象
+> 1. 类的属性和方法，除非显式定义在其本身（即定义在this对象上），否则都是定义在原型上
+> 2. 类的所有实例共享一个原型对象
 
 ## getter和setter
 
@@ -114,8 +114,8 @@ Foo.classMethod() // 'hello'
 
 在属性名和方法名之前使用`#`表示。
 
-- 只能在类的内部使用
-- 可以设置 getter 和 setter 方法
+- 只能在`类的内部`使用
+- 可以设置 `getter` 和 `setter` 方法
 
 ```js
 class IncreasingCounter {
