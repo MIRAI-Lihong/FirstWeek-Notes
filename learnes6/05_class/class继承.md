@@ -83,7 +83,7 @@ class Foo {
 class Bar extends Foo {
   constructor() {
     super()
-    console.log(this.#p)
+    console.log(this.#p) // Uncaught SyntaxError: Private field '#p' must be declared in an enclosing class
     this.#m()
   }
 }
@@ -207,6 +207,7 @@ class A {
 }
 
 class B extends A {
+  super()
   name = 'B'
 }
 
@@ -252,7 +253,7 @@ class Child extends Parent {
 Child.myMethod(1) // "static 1"
 ```
 
-## 七、类的 prototype 和 **proto**
+## 七、类的 prototype 和 proto
 
 ```js
 子类.__proto__ === 父类
